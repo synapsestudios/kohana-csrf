@@ -2,6 +2,11 @@
 
 class CSRF {
 
+	/**
+	 * Returns the token in the session or generates a new one
+	 *
+	 * @return string
+	 */
 	public static function token()
 	{
 		$token = Session::instance()->get('csrf-token');
@@ -14,6 +19,11 @@ class CSRF {
 		return $token;
 	}
 
+	/**
+	 * Validation rule for checking a valid token
+	 *
+	 * @return bool
+	 */
 	public static function valid($token)
 	{
 		return $token === self::token();
