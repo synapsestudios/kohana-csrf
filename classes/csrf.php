@@ -7,10 +7,10 @@ class CSRF {
 	 *
 	 * @return string
 	 */
-	public static function token()
+	public static function token($new = FALSE)
 	{
 		$token = Session::instance()->get('csrf-token');
-		if ( ! $token)
+		if ( ! $token OR $new)
 		{
 			$token = Text::random('alnum', 10);
 			Session::instance()->set('csrf-token', $token);
