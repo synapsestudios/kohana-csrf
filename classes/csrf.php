@@ -5,8 +5,11 @@ class CSRF {
 	public static function token()
 	{
 		$token = Session::instance()->get('csrf-token');
-		! $token AND $token = Text::random('alnum', 10);
-		Session::instance()->set('csrf-token', $token);
+		if ( ! $token)
+		{
+			$token = Text::random('alnum', 10);
+			Session::instance()->set('csrf-token', $token);
+		}
 
 		return $token;
 	}
