@@ -1,10 +1,10 @@
-# Module Name
+# CSRF
 
-*CSRF Helper*
+*CSRF Helper for Kohana 3.x (Cross Site Request Forgery)*
 
-**Module Version:** 1.0.0
-**Module URL:** <http://github.com/synapsestudios/kohana-csrf>
-**Compatible Kohana Version(s):** 3.0  
+- **Module Version:** 1.0.1
+- **Module URL:** <http://github.com/synapsestudios/kohana-csrf>
+- **Tested on Kohana Version(s):** 3.0
 
 ## Description
 The CSRF class will generate a token to use in forms, and provides a validation 
