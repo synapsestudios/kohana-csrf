@@ -15,7 +15,7 @@ class CSRF {
 		// Generate a new token if no token is found
 		if ( ! $token)
 		{
-			$token = Text::random('alnum', rand(20, 30)),
+			$token = Text::random('alnum', rand(20, 30));
 			Session::instance()->set('csrf-token', $token);
 		}
 
