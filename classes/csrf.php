@@ -30,6 +30,6 @@ class CSRF {
 	 */
 	public static function valid($token)
 	{
-		return $token === self::token($namespace);
+		return $token === self::token();
 	}
 }
