@@ -19,7 +19,7 @@ class CSRF {
 			Session::instance()->set('csrf-token', $token);
 		}
 
-		return $token['token'];
+		return $token;
 	}
 
 	/**
